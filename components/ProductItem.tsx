@@ -4,10 +4,12 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import { cutString } from '../helpers/util-functions';
 import { IProductItem } from '../types';
+import itemStyles from '../styles/Item.module.css';
 
 
 
@@ -29,11 +31,7 @@ export default function ProductItem({ product }: IProductItem) {
       sx={{
         height: 200,
       }}>
-            <div style={{ position: 'relative', width: '70%', height: '100%',
-          
-          textAlign: "center",
-          margin: "auto"
-        }}>
+            <div className={itemStyles.imageWrapper}>
             <Image src={product.image} layout="fill" objectFit="cover" />
           </div>
     
@@ -47,12 +45,8 @@ export default function ProductItem({ product }: IProductItem) {
         <Typography variant="body2" color="text.secondary">
           {cutString(product.description)}
         </Typography>
-        <Rating value={product.rating.rate} sx={{
-          position: "absolute",
-          bottom: 10,
-          pointerEvents: "none"
-
-        }} 
+        <Rating value={product.rating.rate} 
+        className={itemStyles.rating} 
         precision={0.1}
         />
       </CardContent>

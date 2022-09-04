@@ -6,6 +6,27 @@
   align-content: space-between;
 }
 
+.cardMedia{
+    height: 100%;
+    flex-basis: 30%;
+    align-items: center;
+    justify-content: center;
+    display: flex
+}
+
+.cardFooter{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%
+}
+
+.cardContent{
+    flex: 1 0 auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+
 .imageContainer {
 
   width: 100%;
@@ -25,13 +46,26 @@
 
   .cardParent{
    display: flex;
-   height: 90vh;
+   height: 70vh;
+   margin: 5%;
    overflow: auto !important;
       padding:2% ;
+  }
+
+  .btn{
+    opacity: 0.8;
+    width: 30%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   @media screen and (max-width: 768px) {
     .cardParent{
      flex-direction: column;
+     margin: 0;
      }
+     .btn{
+      width: 70%;
+    }
   }

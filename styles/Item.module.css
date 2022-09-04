@@ -1,0 +1,19 @@
+.rating {
+    position: absolute;
+    bottom: 10px;
+    pointer-events: none;
+
+}
+
+.cardListContent{
+        position: relative;
+        height: 200;
+}
+
+.imageWrapper{
+    position: relative;
+    width: 70%;
+    height: 100%; 
+    text-align: center;
+    margin: auto
+}

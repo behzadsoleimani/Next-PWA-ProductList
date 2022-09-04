@@ -6,6 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShareIcon from '@mui/icons-material/Share';
 import Meta from '../../../components/Meta';
 import { IProduct, IProductItem } from '../../../types';
 import productStyles from '../../../styles/Products.module.css';
@@ -18,36 +21,22 @@ const Product = ({ product }: IProductItem) => {
       <Card className={productStyles.cardParent}>
         <CardMedia
           component="div"
-          sx={{
-            height: "100%",
-            flexBasis: "30%",
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex"
-          }}>
+          className={productStyles.cardMedia}>
           <div className={productStyles.imageContainer}>
             <Image src={product.image} layout="fill" objectFit="contain"
               className={productStyles.img} />
           </div>
 
         </CardMedia>
-        <Box sx={{
-          display: 'flex', flexDirection: 'column',
-          flexBasis: "70%"
-        }}>
-          <CardContent sx={{
-            flex: '1 0 auto',
-            flexDirection: "column",
-            display: "flex",
-            justifyContent: "space-around"
-          }}>
+        <Box className={productStyles.cardFooter}>
+          <CardContent className={productStyles.cardContent}>
             <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
               <Grid>
                 <Typography component="div" variant="h5">
                   {product.title}
                 </Typography>
                 <Typography variant="h6" color="text.secondary" component="div">
-                  {product.category}
+                  {product.category.toUpperCase()}
                 </Typography>
                 <Typography variant="h6" color="text.secondary" component="div">
                   {`${product.price}$`}
@@ -66,14 +55,30 @@ const Product = ({ product }: IProductItem) => {
             <Grid sx={{
               display: "flex",
               justifyContent: "center",
-              flexDirection: "column"
+              flexDirection: "column",
+              margin: "2% 0"
             }}>
               <Typography component="div" variant="h5">
                 {"DESCRIPTION"}
               </Typography>
-              <Typography component="div" variant="body2">
+              <Typography component="div" variant="body2"
+              sx={{
+                textAlign: "justify"
+              }}>
                 {product.description}
               </Typography>
+              </Grid>
+              <Grid sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: "row",
+              margin: "2% 0"
+            }}>
+              <Button variant="contained" color="error" className={productStyles.btn}>
+                <ShoppingCartIcon />
+                Add To Cart
+              </Button>
+              <ShareIcon style={{opacity: 0.5}} />
             </Grid>
           </CardContent>
           <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
