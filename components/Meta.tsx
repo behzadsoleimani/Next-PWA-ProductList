@@ -15,7 +15,7 @@ const Meta = ({ title, keywords, description } : IMeta) => {
 }
 
 Meta.defaultProps = {
-  title: 'Behtarino Productsdd',
+  title: 'Behtarino Products',
   keywords: 'web development, programming',
   description: 'Get the latest products in web dev',
 }
