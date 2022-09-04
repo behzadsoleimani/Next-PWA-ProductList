@@ -1,0 +1,1 @@
+export const cutString = (str: string , subNum?: number) => str.substr(0 , subNum || 120) + "..."; 
