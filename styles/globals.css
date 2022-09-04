@@ -1,0 +1,33 @@
+:root {
+  --background-bg: #fff;
+  --color-primary: #000;
+  --color-titles: #d23669;
+  
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font: 100%/1.75 'Merriweather', 'Georgia', serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  color: hsla(0, 0%, 0%, 0.9);
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-kerning: normal;
+  background-color: var(--background-bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

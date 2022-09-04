@@ -1,0 +1,36 @@
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+
+.imageContainer {
+
+  width: 100%;
+}
+  .imageContainer > span {
+    position: unset !important;
+  }
+
+  .img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    max-height: 345px !important;
+  }
+
+
+  .cardParent{
+   display: flex;
+   height: 90vh;
+      padding:2% ;
+  }
+
+  @media screen and (max-width: 768px) {
+    .cardParent{
+     flex-direction: column;
+     }
+  }
