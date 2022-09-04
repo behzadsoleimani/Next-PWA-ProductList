@@ -26,6 +26,7 @@
   .cardParent{
    display: flex;
    height: 90vh;
+   overflow: auto;
       padding:2% ;
   }
 
